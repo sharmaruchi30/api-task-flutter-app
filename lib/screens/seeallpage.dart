@@ -36,20 +36,22 @@ class SeeAll extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 1.3 / 2,
-              // crossAxisSpacing: 20,
-              mainAxisSpacing: 20
-            ),
-            itemCount: CatProducts.length,
-            itemBuilder: (context, index) {
-              return ProductCard(
-                  image: CatProducts[index].thumbnail,
-                  title: CatProducts[index].title,
-                  desc: CatProducts[index].desc);
-            }),
+        child: SizedBox(
+          child: GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 1.3 / 2,
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 20
+              ),
+              itemCount: CatProducts.length,
+              itemBuilder: (context, index) {
+                return ProductCard(
+                    image: CatProducts[index].thumbnail,
+                    title: CatProducts[index].title,
+                    desc: CatProducts[index].desc);
+              }),
+        ),
       ),
     );
   }

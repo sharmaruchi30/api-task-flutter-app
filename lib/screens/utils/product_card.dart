@@ -15,12 +15,12 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20),
+      padding: const EdgeInsets.only(left: 5 , right: 5),
       child: Container(
-        height: 200,
+        height: 250,
         width: 150,
         decoration: BoxDecoration(
-          color: Colors.white38,
+          // color: Colors.white38,
           borderRadius: BorderRadius.circular(12)
         ),
 
@@ -30,7 +30,7 @@ class ProductCard extends StatelessWidget {
               height: 150,
               width: 150,
               child: ClipRRect(
-                borderRadius: const BorderRadius.only(topLeft: Radius.circular(12) , topRight: Radius.circular(12)),
+                // borderRadius: const BorderRadius.only(topLeft: Radius.circular(12) , topRight: Radius.circular(12)),
                 child: Image.network(
                   // snapshot.data![index].thumbnail,
                   image,

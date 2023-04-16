@@ -6,7 +6,7 @@ import 'package:task_app/screens/utils/product_card.dart';
 
 class SeeAll extends StatelessWidget {
   String category;
-  List<products> productList;
+  List<Products> productList;
   SeeAll({
     Key? key,
     required this.category,
@@ -15,7 +15,7 @@ class SeeAll extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<products> CatProducts = [];
+    List<Products> CatProducts = [];
     if (category == "Popular") {
       CatProducts = productList;
     } else {
@@ -34,24 +34,21 @@ class SeeAll extends StatelessWidget {
           style: GoogleFonts.poppins(color: Colors.white),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: SizedBox(
-          child: GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 1.3 / 2,
-                crossAxisSpacing: 20,
-                mainAxisSpacing: 20
-              ),
-              itemCount: CatProducts.length,
-              itemBuilder: (context, index) {
-                return ProductCard(
-                    image: CatProducts[index].thumbnail,
-                    title: CatProducts[index].title,
-                    desc: CatProducts[index].desc);
-              }),
-        ),
+      body: SizedBox(
+        child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 1.5 / 2,
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20
+            ),
+            itemCount: CatProducts.length,
+            itemBuilder: (context, index) {
+              return ProductCard(
+                  image: CatProducts[index].thumbnail,
+                  title: CatProducts[index].title,
+                  desc: CatProducts[index].desc);
+            }),
       ),
     );
   }

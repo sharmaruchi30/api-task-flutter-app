@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       create: (_) => ProductListProvider(),
       child: MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Products task App',
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromARGB( 255,18,39,39)
       ),

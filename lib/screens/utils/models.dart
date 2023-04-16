@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-class products{
+class Products{
   int id;
   String title;
   String desc;
@@ -9,7 +9,7 @@ class products{
   String category;
   String thumbnail;
   List<String> images;
-  products({
+  Products({
     required this.id,
     required this.title,
     required this.desc,

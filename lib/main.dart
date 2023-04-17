@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_app/screens/homepage.dart';
-import 'package:task_app/screens/provider/productListProvider.dart';
+import 'package:task_app/provider/productListProvider.dart';
 
 void main() {
   runApp(const MyApp());

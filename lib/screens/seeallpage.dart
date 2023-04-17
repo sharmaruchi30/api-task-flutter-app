@@ -38,7 +38,7 @@ class SeeAll extends StatelessWidget {
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              childAspectRatio: 1.5 / 2,
+              childAspectRatio: 1.4 / 2,
               crossAxisSpacing: 20,
               mainAxisSpacing: 20
             ),

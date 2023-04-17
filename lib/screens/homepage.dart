@@ -1,14 +1,10 @@
-import 'dart:async';
-import 'dart:convert';
+
 
 import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:task_app/screens/provider/productListProvider.dart';
+import 'package:task_app/provider/productListProvider.dart';
 import 'package:task_app/screens/seeallpage.dart';
-import 'package:task_app/screens/utils/models.dart';
 import 'package:task_app/screens/utils/product_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -109,6 +105,7 @@ class _HomePageState extends State<HomePage> {
                                       onTap: () => Navigator.push(
                                           context,
                                           MaterialPageRoute(
+                                            //dividing the category sections
                                               builder: (context) => SeeAll(
                                                     category:
                                                         categories[indexi],
@@ -173,6 +170,7 @@ class _HomePageState extends State<HomePage> {
                         } else {
                           return Column(
                             children: [
+                              // checking if all the data is retrieved or not
                               value.dataLimit
                                   ? Padding(
                                     padding: const EdgeInsets.only( bottom: 20.0),

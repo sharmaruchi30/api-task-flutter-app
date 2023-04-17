@@ -1,3 +1,10 @@
+
+# packages used -
+- dio
+- provider
+- google_fonts
+
+
 # task_app
 
 A new Flutter project.
